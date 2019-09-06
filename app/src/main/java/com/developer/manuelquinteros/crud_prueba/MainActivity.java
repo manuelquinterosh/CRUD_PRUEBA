@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     AlertDialog dialog;
 
     String name, email;
-    //https://www.androidhive.info/2011/11/android-sqlite-database-tutorial/
+
 
 
 
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
- //https://www.androidtutorialpoint.com/storage/android-sqlite-database-tutorial/
+
         adapter.setItemClickListener(new ItemClickListener() {
             @Override
             public void OnItemClick(int position, UserData userData) {
@@ -111,10 +111,10 @@ public class MainActivity extends AppCompatActivity {
 
                 UserData userData = new UserData();
 
-                //userData.setName(name);
-                //userData.setEmail(email);
+                userData.setName(name);
+                userData.setEmail(email);
 
-               // adapter.UpdateData(position, userData);
+                adapter.UpdateData(position, userData);
                 updateCrud(name,email, position);
                 Toast.makeText(MainActivity.this, "Usuario Actualizado...", Toast.LENGTH_SHORT);
             }
